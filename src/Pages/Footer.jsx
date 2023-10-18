@@ -2,6 +2,7 @@
 const Footer = () => {
   return (
     <footer
+      style={{ backgroundImage: "url(https://i.ibb.co/kHQKFwf/download.png)" }}
       data-aos="fade-up"
       data-aos-duration="1000"
       className="footer footer-center p-10 bg-gray-400 text-base-content rounded-lg"
