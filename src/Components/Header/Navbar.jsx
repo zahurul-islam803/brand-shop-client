@@ -36,9 +36,9 @@ const Navbar = () => {
             className="h-[45px] w-[65px]"
             alt=""
           />
-          <a className="btn btn-ghost normal-case text-xl text-[#1aa7f8cc]">
+          <p className=" normal-case text-xl text-[#1aa7f8cc]">
             Entertainment and Media
-          </a>
+          </p>
         </div>
       </div>
       <div className="navbar-center hidden lg:flex">

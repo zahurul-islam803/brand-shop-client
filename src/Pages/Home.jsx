@@ -1,9 +1,22 @@
+import { useLoaderData } from "react-router-dom";
+import Brands from "../Components/Header/Brands";
 import Header from "../Components/Header/Header";
 
 const Home = () => {
+  const brands = useLoaderData();
   return (
     <div className="mb-5">
-      <Header></Header>
+      <div>
+        <Header></Header>
+      </div>
+      <div className="mt-24 mb-10">
+        <h1 className="text-center text-6xl mb-10">Our Brands</h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {brands?.map((brand) => (
+            <Brands key={brand.id} brand={brand}></Brands>
+          ))}
+        </div>
+      </div>
     </div>
   );
 };
