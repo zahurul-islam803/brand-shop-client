@@ -16,7 +16,7 @@ const Header = () => {
             we are your one-stop destination for all things pop culture.
             Explore, shop, and immerse yourself in the magic of entertainment.
           </p>
-          <button className="btn btn-primary">Get Started</button>
+          <button className="btn btn-accent">Get Started</button>
         </div>
       </div>
     </div>

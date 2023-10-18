@@ -2,7 +2,7 @@ import Header from "../Components/Header/Header";
 
 const Home = () => {
   return (
-    <div className="my-5">
+    <div className="mb-5">
       <Header></Header>
     </div>
   );
