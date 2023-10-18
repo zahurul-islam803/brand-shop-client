@@ -1,8 +1,27 @@
+import { useContext } from "react";
 import NavLinks from "./NavLinks";
+import { AuthContext } from "../Provider/AuthProvider";
+import { toast } from "react-toastify";
+import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const Navbar = () => {
-
-
+const { user, logOut } = useContext(AuthContext);
+ const handleToLogOut = () => {
+   logOut()
+     .then(() => {
+       Swal.fire({
+         position: "top-end",
+         icon: "success",
+         title: "LogOut successfully",
+         showConfirmButton: false,
+         timer: 1500,
+       });
+     })
+     .catch((err) => {
+       toast.error(err.message);
+     });
+ };
   return (
     <div className="navbar bg-gray-200 rounded-xl">
       <div className="navbar-start">
@@ -47,13 +66,23 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end md:flex flex-col md:flex-row gap-1 md:pr-2 items-center">
-        <p>zahurul</p>
-        <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-          <div className="w-10 rounded-full">
-            <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-          </div>
-        </label>
-        <a className="btn">LogOut</a>
+        {user ? (
+          <>
+            <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+              <div className="w-10 rounded-full">
+                <img src={user.photoURL} />
+              </div>
+            </label>
+            <p>{user.displayName}</p>
+            <button onClick={handleToLogOut} className="btn btn-ghost">
+              LogOut
+            </button>
+          </>
+        ) : (
+          <Link to={`/login`} className="btn">
+            Login
+          </Link>
+        )}
       </div>
     </div>
   );
