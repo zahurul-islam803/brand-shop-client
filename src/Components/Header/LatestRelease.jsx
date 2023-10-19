@@ -110,7 +110,7 @@ const LatestRelease = () => {
           <img
             src="https://i.ibb.co/sKRDKtw/punjabi-wave.jpg"
             className="h-[400px] w-[350px]"
-            alt="Movie"
+            alt="Music"
           />
         </figure>
         <div className="card-body">
