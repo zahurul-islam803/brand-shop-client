@@ -6,9 +6,14 @@ import Home from "../../Pages/Home";
 import Login from "../../Pages/Login";
 import AddProduct from "../../Pages/AddProduct";
 import MyCart from "../../Pages/MyCart";
-import BrandProduct from "../../Pages/BrandProduct";
 import Registration from "../../Pages/Registration";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
+import Spotify from "../../Pages/Spotify";
+import Disney from "../../Pages/Disney";
+import SonyPictures from "../../Pages/SonyPictures";
+import TimeWarner from "../../Pages/TimeWarner";
+import WarnerBros from "../../Pages/WarnerBros";
+import Netflix from "../../Pages/Netflix";
 
 const router = createBrowserRouter([
   {
@@ -19,7 +24,6 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch("/brand.json"),
       },
       {
         path: "/login",
@@ -42,8 +46,34 @@ const router = createBrowserRouter([
         element: <MyCart></MyCart>,
       },
       {
-        path: "/brandProduct",
-        element: <BrandProduct></BrandProduct>,
+        path: "/disney",
+        element: <Disney></Disney>,
+        loader: () => fetch(`http://localhost:5000/products`),
+      },
+      {
+        path: "/spotify",
+        element: <Spotify></Spotify>,
+        loader: () => fetch(`http://localhost:5000/products`),
+      },
+      {
+        path: "/sonyPictures",
+        element: <SonyPictures></SonyPictures>,
+        loader: () => fetch(`http://localhost:5000/products`),
+      },
+      {
+        path: "/timeWarner",
+        element: <TimeWarner></TimeWarner>,
+        loader: () => fetch(`http://localhost:5000/products`),
+      },
+      {
+        path: "/warnerBros",
+        element: <WarnerBros></WarnerBros>,
+        loader: () => fetch(`http://localhost:5000/products`),
+      },
+      {
+        path: "/netflix",
+        element: <Netflix></Netflix>,
+        loader: () => fetch(`http://localhost:5000/products`),
       },
     ],
   },
