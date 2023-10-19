@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 const TimeWarner = () => {
   const loaderData = useLoaderData();
@@ -85,7 +85,9 @@ const TimeWarner = () => {
                   Product Rating: {timeWarner.rating}
                 </h2>
                 <div className="card-actions justify-end">
-                  <button className="btn btn-info">Details</button>
+                  <Link to={`/productDetails/${timeWarner._id}`}>
+                    <button className="btn btn-info">Details</button>
+                  </Link>
                   <button className="btn btn-success">Update</button>
                 </div>
               </div>

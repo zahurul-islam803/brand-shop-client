@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 const Spotify = () => {
  const loaderData = useLoaderData();
@@ -77,7 +77,9 @@ const Spotify = () => {
                <h2 className="card-title">Product Price: ${spotify.price}</h2>
                <h2 className="card-title">Product Rating: {spotify.rating}</h2>
                <div className="card-actions justify-end">
-                 <button className="btn btn-info">Details</button>
+                 <Link to={`/productDetails/${spotify._id}`}>
+                   <button className="btn btn-info">Details</button>
+                 </Link>
                  <button className="btn btn-success">Update</button>
                </div>
              </div>

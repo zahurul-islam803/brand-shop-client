@@ -14,6 +14,7 @@ import SonyPictures from "../../Pages/SonyPictures";
 import TimeWarner from "../../Pages/TimeWarner";
 import WarnerBros from "../../Pages/WarnerBros";
 import Netflix from "../../Pages/Netflix";
+import ProductDetails from "../../Pages/ProductDetails";
 
 const router = createBrowserRouter([
   {
@@ -73,6 +74,15 @@ const router = createBrowserRouter([
       {
         path: "/netflix",
         element: <Netflix></Netflix>,
+        loader: () => fetch(`http://localhost:5000/products`),
+      },
+      {
+        path: "/productDetails/:id",
+        element: (
+          <PrivateRoute>
+            <ProductDetails></ProductDetails>
+          </PrivateRoute>
+        ),
         loader: () => fetch(`http://localhost:5000/products`),
       },
     ],

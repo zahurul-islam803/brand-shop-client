@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 const Netflix = () => {
 const loaderData = useLoaderData();
@@ -79,7 +79,9 @@ return (
               <h2 className="card-title">Product Price: ${netflix.price}</h2>
               <h2 className="card-title">Product Rating: {netflix.rating}</h2>
               <div className="card-actions justify-end">
-                <button className="btn btn-info">Details</button>
+                <Link to={`/productDetails/${netflix._id}`}>
+                  <button className="btn btn-info">Details</button>
+                </Link>
                 <button className="btn btn-success">Update</button>
               </div>
             </div>

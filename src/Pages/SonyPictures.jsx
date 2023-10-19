@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 const SonyPictures = () => {
   const loaderData = useLoaderData();
@@ -54,7 +54,9 @@ const SonyPictures = () => {
         </div>
       </div>
       <div>
-        <h1 className="text-center text-6xl font-extrabold mb-10 mt-24">Sony Pictures</h1>
+        <h1 className="text-center text-6xl font-extrabold mb-10 mt-24">
+          Sony Pictures
+        </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {filterSonyPictures.map((sony) => (
             <div
@@ -77,7 +79,9 @@ const SonyPictures = () => {
                 <h2 className="card-title">Product Price: ${sony.price}</h2>
                 <h2 className="card-title">Product Rating: {sony.rating}</h2>
                 <div className="card-actions justify-end">
-                  <button className="btn btn-info">Details</button>
+                  <Link to={`/productDetails/${sony._id}`}>
+                    <button className="btn btn-info">Details</button>
+                  </Link>
                   <button className="btn btn-success">Update</button>
                 </div>
               </div>
