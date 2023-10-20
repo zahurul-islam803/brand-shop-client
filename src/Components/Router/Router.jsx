@@ -1,4 +1,3 @@
-
 import { createBrowserRouter } from "react-router-dom";
 import Layout from "../Layout/Layout";
 import ErrorPage from "../../Pages/ErrorPage";
@@ -50,37 +49,43 @@ const router = createBrowserRouter([
             <MyCart></MyCart>
           </PrivateRoute>
         ),
-        loader: () => fetch(`http://localhost:5000/carts`),
+        loader: () => fetch(`https://brand-shop-server-lilac.vercel.app/carts`),
       },
       {
         path: "/disney",
         element: <Disney></Disney>,
-        loader: () => fetch(`http://localhost:5000/products`),
+        loader: () =>
+          fetch(`https://brand-shop-server-lilac.vercel.app/products`),
       },
       {
         path: "/spotify",
         element: <Spotify></Spotify>,
-        loader: () => fetch(`http://localhost:5000/products`),
+        loader: () =>
+          fetch(`https://brand-shop-server-lilac.vercel.app/products`),
       },
       {
         path: "/sonyPictures",
         element: <SonyPictures></SonyPictures>,
-        loader: () => fetch(`http://localhost:5000/products`),
+        loader: () =>
+          fetch(`https://brand-shop-server-lilac.vercel.app/products`),
       },
       {
         path: "/timeWarner",
         element: <TimeWarner></TimeWarner>,
-        loader: () => fetch(`http://localhost:5000/products`),
+        loader: () =>
+          fetch(`https://brand-shop-server-lilac.vercel.app/products`),
       },
       {
         path: "/warnerBros",
         element: <WarnerBros></WarnerBros>,
-        loader: () => fetch(`http://localhost:5000/products`),
+        loader: () =>
+          fetch(`https://brand-shop-server-lilac.vercel.app/products`),
       },
       {
         path: "/netflix",
         element: <Netflix></Netflix>,
-        loader: () => fetch(`http://localhost:5000/products`),
+        loader: () =>
+          fetch(`https://brand-shop-server-lilac.vercel.app/products`),
       },
       {
         path: "/productDetails/:id",
@@ -89,7 +94,8 @@ const router = createBrowserRouter([
             <ProductDetails></ProductDetails>
           </PrivateRoute>
         ),
-        loader: () => fetch(`http://localhost:5000/products`),
+        loader: () =>
+          fetch(`https://brand-shop-server-lilac.vercel.app/products`),
       },
       {
         path: "/products/:id",
@@ -99,7 +105,9 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/products/${params.id}`),
+          fetch(
+            `https://brand-shop-server-lilac.vercel.app/products/${params.id}`
+          ),
       },
     ],
   },

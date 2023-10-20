@@ -1,49 +1,47 @@
 import Swal from "sweetalert2";
 
 const AddProduct = () => {
-
-    const handleAddProduct = e => {
-      e.preventDefault();
-      const form = e.target;
-      const image = form.image.value;
-      const name = form.name.value;
-      const brand = form.brand.value;
-      const type = form.type.value;     
-      const price = form.price.value;
-      const rating = form.rating.value;
-      const desc = form.desc.value;
-      const newProduct = {
-        image,
-        name,
-        brand,
-        type,
-        price,
-        rating,
-        desc,
-      };    
-      // post product
-      fetch("http://localhost:5000/products",{
-        method: "POST",
-        headers: {
-          'content-type': 'application/json'
-        },
-        body: JSON.stringify(newProduct),
-      })
-      .then(res => res.json())
-      .then(data => {
-        if(data.acknowledged){
-           Swal.fire({
-             position: "top-end",
-             icon: "success",
-             title: "Product added successfully",
-             showConfirmButton: false,
-             timer: 1500,
-           });
-           form.reset();
+  const handleAddProduct = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const image = form.image.value;
+    const name = form.name.value;
+    const brand = form.brand.value;
+    const type = form.type.value;
+    const price = form.price.value;
+    const rating = form.rating.value;
+    const desc = form.desc.value;
+    const newProduct = {
+      image,
+      name,
+      brand,
+      type,
+      price,
+      rating,
+      desc,
+    };
+    // post product
+    fetch("https://brand-shop-server-lilac.vercel.app/products", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(newProduct),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.acknowledged) {
+          Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: "Product added successfully",
+            showConfirmButton: false,
+            timer: 1500,
+          });
+          form.reset();
         }
-      }) 
-    }
-
+      });
+  };
 
   return (
     <div className="bg-[#F4F3F0] p-20 rounded-lg">

@@ -21,13 +21,16 @@ const UpdateProduct = () => {
       rating,
     };
     // post update product
-    fetch(`http://localhost:5000/products/${loadedData._id}`, {
-      method: "PUT",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(updateProduct),
-    })
+    fetch(
+      `https://brand-shop-server-lilac.vercel.app/products/${loadedData._id}`,
+      {
+        method: "PUT",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(updateProduct),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         if (data.acknowledged) {

@@ -3,8 +3,8 @@ import { useLoaderData, useParams } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const ProductDetails = () => {
-  const {id} = useParams();
-  const [products, setProducts] = useState({})
+  const { id } = useParams();
+  const [products, setProducts] = useState({});
   const loadedData = useLoaderData();
 
   const productId = products._id;
@@ -22,7 +22,7 @@ const ProductDetails = () => {
   };
 
   const handleToCart = () => {
-    fetch("http://localhost:5000/cart", {
+    fetch("https://brand-shop-server-lilac.vercel.app/cart", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -43,10 +43,10 @@ const ProductDetails = () => {
       });
   };
 
-  useEffect(()=>{
-    const findProduct = loadedData?.find(product => product._id == id);
+  useEffect(() => {
+    const findProduct = loadedData?.find((product) => product._id == id);
     setProducts(findProduct);
-  },[id, loadedData])
+  }, [id, loadedData]);
   return (
     <div
       data-aos="zoom-in-up"
@@ -64,7 +64,9 @@ const ProductDetails = () => {
         <h5>Rating: {products.rating}</h5>
         <p>Description: {products.desc}</p>
         <div className="card-actions justify-end">
-          <button onClick={handleToCart} className="btn btn-accent">Add To Cart</button>
+          <button onClick={handleToCart} className="btn btn-accent">
+            Add To Cart
+          </button>
         </div>
       </div>
     </div>
