@@ -1,8 +1,18 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Added at least 5 project features and functionality.
 
-Currently, two official plugins are available:
+- This website is an entertainment and media website. All types of entertainment items are available here.
+- After registration and login, the user can see the details page of the product and can place it in the cart.
+- User can put specific products in the cart and delete them as per his/her wish.
+- Dark and light themes can be applied on my website by toggling.
+- Only home page can be seen without login on this website. To see all the pages, the user must register and login.
+- user can see Latest released movies and music in the home page. 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+
+---
+# Website Name: Entertainment and Media
+
+# website live link:
+## 🔗 
+
