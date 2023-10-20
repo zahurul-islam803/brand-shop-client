@@ -82,7 +82,11 @@ return (
                 <Link to={`/productDetails/${netflix._id}`}>
                   <button className="btn btn-info">Details</button>
                 </Link>
-                <button className="btn btn-success">Update</button>
+                <Link to={`/products/${netflix._id}`}>
+                  <button type="submit" className="btn btn-success">
+                    Update
+                  </button>
+                </Link>
               </div>
             </div>
           </div>

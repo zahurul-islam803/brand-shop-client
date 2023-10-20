@@ -88,7 +88,11 @@ const TimeWarner = () => {
                   <Link to={`/productDetails/${timeWarner._id}`}>
                     <button className="btn btn-info">Details</button>
                   </Link>
-                  <button className="btn btn-success">Update</button>
+                  <Link to={`/products/${timeWarner._id}`}>
+                    <button type="submit" className="btn btn-success">
+                      Update
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>

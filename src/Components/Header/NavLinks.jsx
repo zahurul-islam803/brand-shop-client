@@ -25,7 +25,7 @@ const NavLinks = () => {
       </li>
       <li>
         <NavLink
-          to="/myCart"
+          to="/carts"
           className={({ isActive, isPending }) =>
             isPending ? "pending" : isActive ? "active" : ""
           }

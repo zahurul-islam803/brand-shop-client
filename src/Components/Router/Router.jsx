@@ -15,6 +15,7 @@ import TimeWarner from "../../Pages/TimeWarner";
 import WarnerBros from "../../Pages/WarnerBros";
 import Netflix from "../../Pages/Netflix";
 import ProductDetails from "../../Pages/ProductDetails";
+import UpdateProduct from "../../Pages/UpdateProduct";
 
 const router = createBrowserRouter([
   {
@@ -43,8 +44,13 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "/myCart",
-        element: <MyCart></MyCart>,
+        path: "/carts",
+        element: (
+          <PrivateRoute>
+            <MyCart></MyCart>
+          </PrivateRoute>
+        ),
+        loader: () => fetch(`http://localhost:5000/carts`),
       },
       {
         path: "/disney",
@@ -84,6 +90,16 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: () => fetch(`http://localhost:5000/products`),
+      },
+      {
+        path: "/products/:id",
+        element: (
+          <PrivateRoute>
+            <UpdateProduct></UpdateProduct>
+          </PrivateRoute>
+        ),
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/products/${params.id}`),
       },
     ],
   },

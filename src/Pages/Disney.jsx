@@ -82,7 +82,9 @@ const Disney = () => {
                  <Link to={`/productDetails/${disney._id}`}>
                    <button className="btn btn-info">Details</button>
                  </Link>
-                 <button className="btn btn-success">Update</button>
+                 <Link to={`/products/${disney._id}`}>
+                   <button type="submit" className="btn btn-success">Update</button>
+                 </Link>
                </div>
              </div>
            </div>
