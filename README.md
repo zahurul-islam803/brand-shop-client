@@ -1,5 +1,5 @@
 
-# Added at least 5 project features and functionality.
+# Project features and functionality.
 
 - This website is an entertainment and media website. All types of entertainment items are available here.
 - After registration and login, the user can see the details page of the product and can place it in the cart.
@@ -11,7 +11,6 @@
 
 
 ---
-# Website Name: Entertainment and Media
 
 # website live link:
 ## 🔗 https://entertainment-and-media-8ded1.web.app/
