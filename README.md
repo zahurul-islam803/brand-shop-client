@@ -1,9 +1,9 @@
 
-Unique Feature: 1. Users can watch latest released movies and songs by clicking on the watch button and it will take them to a new page, where the video will play.
+- Unique Feature: 1. Users can watch latest released movies and songs by clicking on the watch button and it will take them to a new page, where the video will play.
                 2. AOS package is used for animation.
 
-Unique Technology: 1. Dark Light mood in the whole Website. 2. AOS Package for animation. 
-Project Selling line: This project is made for entertainment loving people.Arranging to watch movies for free for those who cannot watch movies due to lack of money.
+- Unique Technology: 1. Dark Light mood in the whole Website. 2. AOS Package for animation. 
+- Project Selling line: This project is made for entertainment loving people.Arranging to watch movies for free for those who cannot watch movies due to lack of money.
 
 
 # Project features and functionality.
