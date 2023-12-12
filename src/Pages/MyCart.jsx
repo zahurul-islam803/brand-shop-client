@@ -5,7 +5,6 @@ import Swal from "sweetalert2";
 const MyCart = () => {
   const loadedCart = useLoaderData();
   const [carts, setCarts] = useState(loadedCart);
-
   const handleDeleteCart = (id) => {
     fetch(`https://brand-shop-server-lilac.vercel.app/carts/${id}`, {
       method: "DELETE",

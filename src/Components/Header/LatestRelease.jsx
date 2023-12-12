@@ -17,7 +17,13 @@ const LatestRelease = () => {
           <h2 className="card-title">New movie is released!</h2>
           <p>Elemental Disney Movie</p>
           <div className="card-actions justify-end">
-            <button className="btn btn-accent">Watch</button>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://www.youtube.com/watch?v=NeAxQd_tzhg"
+            >
+              <button className="btn btn-accent">Watch</button>
+            </a>
           </div>
         </div>
       </div>
@@ -37,7 +43,13 @@ const LatestRelease = () => {
           <h2 className="card-title">New movie is released!</h2>
           <p>Justified:City primeval Movie</p>
           <div className="card-actions justify-end">
-            <button className="btn btn-accent">Watch</button>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://www.youtube.com/watch?v=TxiRXNGkYJ4"
+            >
+              <button className="btn btn-accent">Watch</button>
+            </a>
           </div>
         </div>
       </div>
@@ -57,7 +69,13 @@ const LatestRelease = () => {
           <h2 className="card-title">New movie is released!</h2>
           <p>shazam Movie</p>
           <div className="card-actions justify-end">
-            <button className="btn btn-accent">Watch</button>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://www.youtube.com/watch?v=NpucvQCkgOk"
+            >
+              <button className="btn btn-accent">Watch</button>
+            </a>
           </div>
         </div>
       </div>
@@ -77,7 +95,13 @@ const LatestRelease = () => {
           <h2 className="card-title">New movie is released!</h2>
           <p>The conference Movie</p>
           <div className="card-actions justify-end">
-            <button className="btn btn-accent">Watch</button>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://www.youtube.com/watch?v=B9hpl8e-lQ4"
+            >
+              <button className="btn btn-accent">Watch</button>
+            </a>
           </div>
         </div>
       </div>
@@ -97,7 +121,13 @@ const LatestRelease = () => {
           <h2 className="card-title">New music is released!</h2>
           <p>Todays To Hits Music</p>
           <div className="card-actions justify-end">
-            <button className="btn btn-accent">Watch</button>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://www.youtube.com/watch?v=Op4EMZXWjyE"
+            >
+              <button className="btn btn-accent">Watch</button>
+            </a>
           </div>
         </div>
       </div>
@@ -117,7 +147,13 @@ const LatestRelease = () => {
           <h2 className="card-title">New music is released!</h2>
           <p>Punjabi Wave Music</p>
           <div className="card-actions justify-end">
-            <button className="btn btn-accent">Watch</button>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://www.youtube.com/watch?v=Ckkg1tMqKv0"
+            >
+              <button className="btn btn-accent">Watch</button>
+            </a>
           </div>
         </div>
       </div>
